@@ -1,1 +1,326 @@
+atividades resolvidas
+
+1-import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner input = new Scanner( System.in );
+		
+	  Double nota1, nota2, media;
+	  System.out.print("Digite a primeira nota: ");
+	  nota1 = input.nextDouble();
+	  
+	  System.out.print("Digite a segunda nota: ");
+	  nota2 = input.nextDouble();
+	  
+	  media = (nota1 + nota2)/ 2;
+	  
+	  if (media >= 7) {
+	  System.out.print("Aprovado ");   
+	  
+	  }else {
+	  System.out.print("Reprovado ");
+	  }
+	}
+}
+2-import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner input = new Scanner( System.in );
+		
+	  Double nota1, nota2, nota3;
+	  Double media;
+	  
+	  System.out.print("Digite a primeira nota: ");
+	  nota1 = input.nextDouble();
+	  
+	  System.out.print("Digite a segunda nota: ");
+	  nota2 = input.nextDouble();
+	  
+	  System.out.print("Digite a terceira nota: ");
+	  nota3 = input.nextDouble();
+	  
+	  media = (nota1 + nota2 + nota3)/ 3;
+	  
+	  if (media < 3) {
+	  System.out.print("Reprovado ");   
+	  
+	  }else if (media < 7) {
+	  System.out.print("Exame ");
+	  
+	  }else {
+	  System.out.print("Aprovado ");
+	 }
+	
+	}
+}
+3-import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+
+        Scanner input = new Scanner(System.in);
+
+        double a, b, c;
+        double delta;
+        double x1, x2;
+        
+        System.out.print("Digite o valor de a: ");
+        a = input.nextDouble();
+
+        System.out.print("Digite o valor de b: ");
+        b = input.nextDouble();
+
+        System.out.print("Digite o valor de c: ");
+        c = input.nextDouble();
+        
+        delta = Math.pow(b, 2) - 4 * a * c;
+       
+        if (delta > 0) {
+        x1 = (-b + Math.sqrt(delta)) / (2 * a);
+        
+        x2 = (-b - Math.sqrt(delta)) / (2 * a);
+
+        System.out.println("x1 = " + x1);
+        
+        System.out.println("x2 = " + x2);
+        
+        }
+        else if (delta == 0) {
+        x1 = -b / (2 * a);
+        System.out.println("x = " + x1);
+    
+        }else {
+        System.out.println("Nao existem raizes reais");
+        
+        }
+    }
+}
+4-import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+
+        Scanner input = new Scanner(System.in);
+
+        double peso;
+        double altura;
+        double imc;
+        
+        System.out.print("Digite seu peso em kg: ");
+        peso = input.nextDouble();
+
+        System.out.print("Digite sua altura em metros: ");
+        altura = input.nextDouble();
+        
+        imc = peso / Math.pow(altura, 2);
+        
+        if (imc < 20) {
+            System.out.print("Abaixo do peso");
+        }
+        else if (imc < 25) {
+            System.out.print("Peso normal");
+        }
+        else if(imc < 30) {
+            System.out.print("Sobre peso");
+        }
+         else if(imc < 40) {
+            System.out.print("Obeso");
+            
+        }else {
+            System.out.print("Obeso morbido");
+        }
+   }          
+}    
+5-import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+
+        Scanner input = new Scanner(System.in);
+
+       System.out.println("Escolha um planeta:");
+       System.out.println("1 - Terra");
+       System.out.println("2 - Lua");
+       System.out.println("3 - Marte");
+
+       int planeta = input.nextInt();
+       
+       double g;
+       
+        switch (planeta) {
+        case 1:
+        g = 9.8;
+        break;
+
+        case 2:
+        g = 1.62;
+        break;
+
+        case 3:
+        g = 3.71;
+        break;
+
+        default:
+        g = 0;
+        System.out.println("Planeta inválido!");
+        }
+        
+        double v0;
+        double t;
+
+        System.out.print("Digite a velocidade inicial (v0): ");
+        v0 = input.nextDouble();
+
+        System.out.print("Digite o tempo (t): ");
+        t = input.nextDouble();
+        
+        double velocidade;
+        double altura;
+        
+        velocidade = v0 - g * t;
+        System.out.println("Velocidade: " + velocidade);
+        
+        altura = v0 * t - (g * Math.pow(t, 2)) / 2;
+        System.out.println("Altura: " + altura);
+
+   }          
+}    
+6-import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+
+        Scanner input = new Scanner(System.in);
+
+      double x;
+      double resultado;
+      System.out.print("Digite o valor de x: ");
+      x = input.nextDouble();
+      if (x < -2) {
+      resultado = 2 * x + 2;
+}
+      else if (x < 3) {
+      resultado = 3;
+     
+      }else {
+      resultado = -x;
+}     
+      System.out.println("Resultado: " + resultado);
+   }          
+}    
+           7-import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+
+        Scanner input = new Scanner(System.in);
+        
+    double x, y, z;
+       
+      System.out.print("Digite o valor de X: ");
+      x = input.nextDouble();
+
+      System.out.print("Digite o valor de Y: ");
+      y = input.nextDouble();
+
+      System.out.print("Digite o valor de Z: ");
+      z = input.nextDouble();
+      
+      if (x > 0 && y > 0 && z > 0 &&
+      x < y + z && y < x + z && z < x + y) {
+
+      System.out.println("Formam um triângulo");
+
+      } else {
+      System.out.println("Não formam um triângulo");
+}
+
+   }          
+}    
+8-import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+
+        Scanner input = new Scanner(System.in);
+        
+        double numero1, numero2;
+        int opcao;
+        
+        System.out.print("Digite o primeiro número: ");
+        numero1 = input.nextDouble();
+
+        System.out.print("Digite o segundo número: ");
+        numero2 = input.nextDouble();
+        System.out.println("1 - Somar os dois números");
+        
+        System.out.println("2 - Multiplicar os dois números");
+        System.out.println("3 - Subtrair o maior pelo menor");
+        System.out.println("4 - Dividir o primeiro pelo segundo");
+
+        System.out.print("Escolha uma opção: ");
+        opcao = input.nextInt();
+        
+        switch (opcao) {
+            case 1:
+      System.out.println("Resultado: " + (numero1 + numero2));
+      break;
+            
+        case 2:
+      System.out.println("Resultado: " + (numero1 * numero2));
+      break;
+     
+       case 3:
+      if (numero1 > numero2) {
+        System.out.println("Resultado: " + (numero1 - numero2));
+      } else {
+        System.out.println("Resultado: " + (numero2 - numero1));
+      }
+       break;
+      
+       case 4:
+       if (numero2 != 0) {
+        System.out.println("Resultado: " + (numero1 / numero2));
+      } else {
+        System.out.println("Nao e possivel dividir por zero");
+      }
+       break;
+      
+      default:
+      System.out.println("Opção inválida!");
+        
+        }        
+    }   
+}    
+9-import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+
+        Scanner entrada = new Scanner(System.in);
+
+        int diarias;
+        double diaria = 500.00;
+        double taxa;
+        double total;    
+        
+        System.out.print("Digite o número de diárias: ");
+        diarias = entrada.nextInt();
+        
+        if (diarias < 15) {
+            taxa = 15.00;
+        }
+        else if (diarias == 15) {
+            taxa = 10.00;
+            
+        }else {
+            taxa = 5.00;
+        }
+        total = (diarias * diaria) + (diarias * taxa);
+        
+        System.out.print("O valor a pagar e: " + total);
+    }   
+}    
 
